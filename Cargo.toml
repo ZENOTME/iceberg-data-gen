@@ -1,0 +1,19 @@
+[package]
+name = "iceberg_data_generator"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+iceberg = { git = "https://github.com/risingwavelabs/iceberg-rust.git", rev = "a43641762eafe135498b886db2257102f3069484", features = [
+    "storage-s3",
+    "storage-gcs",
+] }
+iceberg-catalog-rest = { git = "https://github.com/risingwavelabs/iceberg-rust.git", rev = "a43641762eafe135498b886db2257102f3069484" }
+serde = { version = "1.0", features = ["derive"] }
+toml = "0.8"
+tokio = { version = "1.0", features = ["full"] }
+anyhow = "1.0"
+uuid = "1.0"
+clap = { version = "4.0", features = ["derive"] }
+arrow = "54.1"
+parquet = "54.1"
